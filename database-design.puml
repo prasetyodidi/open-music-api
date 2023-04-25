@@ -1,0 +1,27 @@
+@startuml
+entity albums {
+    id : string
+    --
+    name : string
+    --
+    year : int
+    --
+}
+
+entity songs {
+    id : string
+    --
+    title : string
+    --
+    year : int
+    --
+    performer : string
+    --
+    genre : string
+    --
+    duration : int
+    --
+    album_id : string
+}
+albums ||--|{ songs
+@enduml
