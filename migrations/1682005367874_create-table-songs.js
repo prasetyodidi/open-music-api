@@ -31,6 +31,8 @@ exports.up = (pgm) => {
       reference: '"albums"',
     },
   });
+
+  pgm.addConstraint('songs', 'fk_users.album_id_albums.id', 'FOREIGN KEY(album_id) REFERENCES albums(id) ON DELETE CASCADE');
 };
 
 exports.down = (pgm) => {
